@@ -1,0 +1,13 @@
+CONFIG_IDF_TARGET="esp32c6"
+
+# Zigbee (router role — the device is mains powered and strengthens the mesh)
+CONFIG_ZB_ENABLED=y
+CONFIG_ZB_ZCZR=y
+CONFIG_ZB_RADIO_NATIVE=y
+
+# Custom partition table with Zigbee storage partitions
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
+
+# 1 ms tick for the motor control loop timing
+CONFIG_FREERTOS_HZ=1000
